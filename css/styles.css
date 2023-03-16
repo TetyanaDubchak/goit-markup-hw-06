@@ -620,8 +620,12 @@ margin-right: 80px;
         color: var(--color-main-title);
 }
 
+.footer-input-btn-wrap {
+display: flex;
+}
+
 .footer-input {
-    margin-right: 22px;
+    margin-right: 24px;
         padding: 8px 16px;
         width: 264px;
 
@@ -631,9 +635,16 @@ margin-right: 80px;
         background-color: transparent;
         color: #FFFFFF;
         outline: none;
+
+        transition: border-color var(--transition-dur-func);
+}
+
+.footer-input:focus {
+    border-color: #4D5AE5;
 }
 
 .footer-mail-btn {
+    display: flex;
     font-family: inherit;
     min-width: 165px;
     padding: 8px 24px;
@@ -649,10 +660,15 @@ margin-right: 80px;
      border-color: transparent;
 
      cursor: pointer;
+     transition: background-color var(--transition-dur-func);
 }
 
+.footer-mail-btn:hover,
+.footer-mail-btn:focus {
+    background-color: var(--accent-color);
+}
 .subscribe-icon {
-    color: #E7E9FC;
+margin-left: 16px;
 }
 /*==================/FOOTER========*/
 
@@ -679,6 +695,7 @@ transition: opacity var(--transition-dur-func), visibility var(--transition-dur-
 padding: 72px 24px 24px 24px;
 
 width: 408px;
+height: 584;
 background-color: #fcfcfc;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
@@ -741,7 +758,7 @@ fill: #FFFFFF;
     flex-direction: column;
 }
 
-.modal-form-field {
+.form-group {
     margin-bottom: 8px;
 }
 .modal-form-descr {
@@ -795,6 +812,10 @@ border-color: #4D5AE5;
     fill: #4D5AE5;
 }
 
+.form-group-textarea {
+    margin-bottom: 16px;
+}
+
 .modal-form-textarea {
     padding: 8px 16px;
     resize: none;
@@ -805,14 +826,14 @@ border-color: #4D5AE5;
     border-radius: 4px;
 
     font-weight: 400;
-        font-size: 12px;
-        line-height: 1.33;
-        letter-spacing: 0.04em;
-        color: #000000;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #000000;
     
-        outline: none;
+    outline: none;
     
-        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-textarea:focus {
@@ -821,10 +842,10 @@ border-color: #4D5AE5;
 
 .modal-form-textarea::placeholder {
     font-size: 12px;
-        line-height: 1.33;
-        letter-spacing: 0.04em;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
     
-        color: rgba(117, 117, 117, 0.5);
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form-check:checked + .policy-field-check::before {
